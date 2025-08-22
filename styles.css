@@ -1,19 +1,11 @@
-/* style.css */
-
-/*
-* The `*` selector, also known as the universal selector, applies styles to all elements. 
-* It's often used to reset default browser styles like margins and padding, 
-* ensuring a consistent starting point for all elements on the page.
-*/
+/* General Portfolio Styles */
+/* These styles will apply to all pages unless overridden by a more specific rule. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* This is the master style for all content, including the matrix canvas. 
-* This will be the default style for your entire portfolio.
-*/
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
     margin: 0;
@@ -98,7 +90,7 @@ body {
 .feature-grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Updated to force three columns */
     margin-top: 2rem;
 }
 
@@ -176,7 +168,6 @@ footer {
 }
 
 /* Blog-specific styles to match your site */
-
 .blog-hero {
     background: linear-gradient(135deg, #22c55e 0%, #000000 100%);
     color: white;
@@ -297,19 +288,17 @@ footer {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: stretch; /* Add this line */
+    align-items: stretch;
 }
 
 .content-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Add this line */
+    justify-content: space-between;
 }
 
-/* * Styles below here are ONLY for the landing page with the
-* ID of "matrix-intro". They will override the default styles
-* defined above.
-*/
+/* Intro Page Specific Styles */
+/* These styles will only apply to the page with id="matrix-intro", overriding the general styles above. */
 #matrix-intro {
     background-color: #000000;
     color: #fbfdfc;
@@ -421,4 +410,5 @@ footer {
     color: #0f0;
     margin: 5px 0;
     font-size: 14px;
+    opacity: 0; /* Updated to ensure lines are initially hidden */
 }

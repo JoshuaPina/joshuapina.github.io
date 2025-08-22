@@ -21,20 +21,8 @@ function enterMatrix() {
         // Remove black overlay
         overlay.style.opacity = '0';
 
-        // Show welcome text after a delay
-        setTimeout(() => {
-            document.getElementById('welcomeText').style.opacity = '1';
-        }, 1000);
-
-        // Show matrix interface
-        setTimeout(() => {
-            document.getElementById('matrixInterface').style.opacity = '1';
-        }, 2000);
-
-        // Redirect to your portfolio after 6 seconds
-        setTimeout(() => {
-            window.location.href = '../pages/home.html'; 
-        }, 6000);
+        // Start the sequential loading text animation
+        displayLoadingText();
 
     }, 1000);
 }
@@ -78,6 +66,38 @@ function startMatrixRain() {
 
     // Start the animation
     setInterval(draw, 33);
+}
+
+// New function to display text sequentially
+function displayLoadingText() {
+    const welcomeText = document.getElementById('welcomeText');
+    const matrixInterface = document.getElementById('matrixInterface');
+    const matrixLines = matrixInterface.querySelectorAll('.matrix-line');
+
+    // Show main welcome text first
+    setTimeout(() => {
+        welcomeText.style.opacity = '1';
+    }, 1000);
+
+    // Show the matrix interface container
+    setTimeout(() => {
+        matrixInterface.style.opacity = '1';
+    }, 2000);
+
+    // Loop through each loading line and reveal it with a delay
+    setTimeout(() => {
+        for (let i = 0; i < matrixLines.length; i++) {
+            setTimeout(() => {
+                matrixLines[i].style.opacity = '1';
+            }, i * 500); // 500ms delay between each line
+        }
+
+        // Redirect to your portfolio after the lines have loaded
+        setTimeout(() => {
+            window.location.href = 'pages/home.html';
+        }, 3000 + (matrixLines.length * 500)); // Dynamic delay based on number of lines
+
+    }, 2000);
 }
 
 // Handle window resize

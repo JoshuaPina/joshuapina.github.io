@@ -1,285 +1,297 @@
 /* style.css */
 
+/*
+* The `*` selector, also known as the universal selector, applies styles to all elements. 
+* It's often used to reset default browser styles like margins and padding, 
+* ensuring a consistent starting point for all elements on the page.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* This is the master style for all content, including the matrix canvas. 
+* This will be the default style for your entire portfolio.
+*/
 body {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fbfdfc;
-  color: #131614;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbfdfc;
+    color: #131614;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .logo {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #131614;
-  font-weight: 600;
+    text-decoration: none;
+    color: #131614;
+    font-weight: 600;
 }
 
 .icons {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('./images/matrix.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 6rem 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('./images/matrix.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
+    font-size: 2.5rem;
+    font-weight: 900;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 .hero button {
-  padding: 0.75rem 1.5rem;
-  background-color: white;
-  color: #131614;
-  border: none;
-  border-radius: 999px;
-  font-weight: bold;
-  cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #131614;
+    border: none;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .features {
-  padding: 3rem 1rem;
-  max-width: 960px;
-  margin: auto;
-  text-align: center;
+    padding: 3rem 1rem;
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
 }
 
 .feature-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 2rem;
 }
 
 .feature-card {
-  background-color: white;
-  border: 1px solid #dee3e0;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  text-align: center;
+    background-color: white;
+    border: 1px solid #dee3e0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 .feature-card .icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-
-        footer {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .footer-container {
-            display: flex;
-            max-width: 960px;
-            flex: 1;
-            flex-direction: column;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-        }
-        
-        .footer-link {
-            color: #60758a;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: normal;
-            min-width: 160px;
-            text-decoration: none;
-        }
-        
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
-        }
-        
-        .social-links a {
-            color: #60758a;
-        }
-        
-        .social-links svg {
-            width: 24px;
-            height: 24px;
-        }
-        
-        .footer-copyright {
-            color: #60758a;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: normal;
-        }
-        
-
-    /* Blog-specific styles to match your site */
-
-    .blog-hero {
-      background: linear-gradient(135deg, #22c55e 0%, #000000 100%);
-      color: white;
-      text-align: center;
-      padding: 4rem 1rem 3rem;
+footer {
+    display: flex;
+    justify-content: center;
 }
-    .blog-hero h1 {
-      font-size: 2.5rem;
-      font-weight: 900;
-      margin: 0 0 1rem 0;
-    }
-    
-    .blog-hero p {
-      font-size: 1.2rem;
-      margin: 0;
-      opacity: 0.9;
-    }
-    
-    .blog-content {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-    }
-    
-    .blog-section {
-      margin-bottom: 3rem;
-    }
-    
-    .blog-section h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #131614;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 0.5rem;
-    }
-    
-    .blog-grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    
-    .blog-card {
-      background-color: white;
-      border: 1px solid #dee3e0;
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    
-    .blog-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    
-    .blog-card.project-post {
-      border-left: 4px solid #33c705;
-    }
-    
-    .blog-card h3 {
-      margin: 0 0 0.75rem 0;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #131614;
-    }
-    
-    .blog-card p {
-      margin: 0 0 1rem 0;
-      line-height: 1.5;
-      color: #555;
-    }
-    
-    .blog-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.875rem;
-      color: #777;
-    }
-    
-    .blog-status {
-      background-color: #f0f0f0;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-    
-    .blog-status.coming-soon {
-      background-color: #fff3cd;
-      color: #856404;
-    }
-    
-    .blog-status.published {
-      background-color: #d4edda;
-      color: #155724;
-    }
-    
-    .project-badge {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background-color: #33c705;
-      color: white;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
 
+.footer-container {
+    display: flex;
+    max-width: 960px;
+    flex: 1;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-link {
+    color: #60758a;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    min-width: 160px;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social-links a {
+    color: #60758a;
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-copyright {
+    color: #60758a;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+}
+
+/* Blog-specific styles to match your site */
+
+.blog-hero {
+    background: linear-gradient(135deg, #22c55e 0%, #000000 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0 0 1rem 0;
+}
+
+.blog-hero p {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.blog-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.blog-section {
+    margin-bottom: 3rem;
+}
+
+.blog-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #131614;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.blog-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.blog-card {
+    background-color: white;
+    border: 1px solid #dee3e0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.blog-card.project-post {
+    border-left: 4px solid #33c705;
+}
+
+.blog-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #131614;
+}
+
+.blog-card p {
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+    color: #555;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #777;
+}
+
+.blog-status {
+    background-color: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.blog-status.coming-soon {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.blog-status.published {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.project-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #33c705;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
 
 .content-grid {
     display: grid;
@@ -294,3 +306,119 @@ body {
     justify-content: space-between; /* Add this line */
 }
 
+/* * Styles below here are ONLY for the landing page with the
+* ID of "matrix-intro". They will override the default styles
+* defined above.
+*/
+#matrix-intro {
+    background-color: #000000;
+    color: #fbfdfc;
+}
+
+#matrix-intro .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#matrix-intro .matrix-btn {
+    background-color: #fbfdfc;
+    border: 2px solid #fbfdfc;
+    color: #131614;
+    font-size: 18px;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 999px;
+    box-shadow: 0 0 20px rgba(251, 253, 252, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#matrix-intro .matrix-btn:hover {
+    box-shadow: 0 0 30px rgba(251, 253, 252, 0.7);
+    transform: scale(1.05);
+}
+
+#matrix-intro .matrix-btn:active {
+    transform: scale(0.95);
+}
+
+#matrix-intro .title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(251, 253, 252, 0.5);
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#matrix-intro .matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+#matrix-intro .fade-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+}
+
+#matrix-intro .hidden {
+    opacity: 0 !important;
+}
+
+#matrix-intro .matrix-active {
+    opacity: 1 !important;
+}
+
+#matrix-intro .welcome-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    z-index: 15;
+    opacity: 0;
+    text-shadow: 0 0 20px #0f0;
+    text-align: center;
+    transition: opacity 2s ease;
+    color: #0f0;
+}
+
+#matrix-intro .matrix-interface {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 15;
+    opacity: 0;
+    transition: opacity 2s ease 3s;
+    font-family: 'Courier New', monospace;
+}
+
+#matrix-intro .matrix-line {
+    color: #0f0;
+    margin: 5px 0;
+    font-size: 14px;
+}

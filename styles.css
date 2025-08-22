@@ -100,3 +100,197 @@ body {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
+
+
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .footer-container {
+            display: flex;
+            max-width: 960px;
+            flex: 1;
+            flex-direction: column;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+        
+        .footer-link {
+            color: #60758a;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: normal;
+            min-width: 160px;
+            text-decoration: none;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .social-links a {
+            color: #60758a;
+        }
+        
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .footer-copyright {
+            color: #60758a;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: normal;
+        }
+        
+
+    /* Blog-specific styles to match your site */
+
+    .blog-hero {
+      background: linear-gradient(135deg, #22c55e 0%, #000000 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+}
+    .blog-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin: 0 0 1rem 0;
+    }
+    
+    .blog-hero p {
+      font-size: 1.2rem;
+      margin: 0;
+      opacity: 0.9;
+    }
+    
+    .blog-content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+    
+    .blog-section {
+      margin-bottom: 3rem;
+    }
+    
+    .blog-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #131614;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+    }
+    
+    .blog-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .blog-card {
+      background-color: white;
+      border: 1px solid #dee3e0;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .blog-card.project-post {
+      border-left: 4px solid #33c705;
+    }
+    
+    .blog-card h3 {
+      margin: 0 0 0.75rem 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #131614;
+    }
+    
+    .blog-card p {
+      margin: 0 0 1rem 0;
+      line-height: 1.5;
+      color: #555;
+    }
+    
+    .blog-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+      color: #777;
+    }
+    
+    .blog-status {
+      background-color: #f0f0f0;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .blog-status.coming-soon {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+    
+    .blog-status.published {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    
+    .project-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #33c705;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+
+.content-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: stretch; /* Add this line */
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Add this line */
+}
+

@@ -412,3 +412,49 @@ footer {
     font-size: 14px;
     opacity: 0; /* Updated to ensure lines are initially hidden */
 }
+.ts-title{
+  text-align:center;
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.ts-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 900px){
+  .ts-grid{ grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+.ts-col{
+  background: transparent; /* keep your page bg */
+}
+
+.ts-col h3{
+  text-align:center;
+  margin: 1rem 0 .5rem;
+  color: #7b8aa0; /* tweak to your palette */
+  font-weight: 800;
+}
+.ts-col h4{
+  text-align:center;
+  margin: 1rem 0 .25rem;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.icon-grid{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:14px;
+  margin-bottom: 8px;
+}
+.icon{
+  width:56px; height:56px; padding:12px; border-radius:14px;
+  background:#fff; border:1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.icon:hover{ transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 16px rgba(0,0,0,.18); }

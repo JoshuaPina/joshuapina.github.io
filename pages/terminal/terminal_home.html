@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Portfolio</title>
+    <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-button btn-close"></div>
+            <div class="terminal-button btn-minimize"></div>
+            <div class="terminal-button btn-maximize"></div>
+            <span style="color: #8b949e; font-size: 12px; margin-left: 12px;">guest@portfolio:~$</span>
+        </div>
+        <div class="terminal-body" id="terminal">
+            <div class="terminal-line">
+                <pre class="ascii-art">
+ ____        _          ____        _       
+|  _ \  __ _| |_ __ _  |  _ \  ___ (_) ___  
+| | | |/ _` | __/ _` | | | | |/ _ \| |/ _ \ 
+| |_| | (_| | || (_| | | |_| | (_) | | (_) |
+|____/ \__,_|\__\__,_| |____/ \___// |\___/ 
+                                  |__/  
+                </pre>
+            </div>
+            <div class="terminal-line">
+                <span class="success">Welcome! Choose your fighter:</span>
+            </div>
+            <div class="terminal-line"></div>
+            <div class="terminal-line">  <span class="info">[1]</span> Terminal mode: Interactive CLI experience</div>
+            <div class="terminal-line">  <span class="info">[2]</span> Visual portfolio: Traditional website</div>
+            <div class="terminal-line">  <span class="info">[help]</span> Open up the full menu!</div>
+            <div class="terminal-line"></div>
+            <div class="terminal-line">Type <span class="info">1</span> or <span class="info">2</span> and press Enter...</div>
+            <div class="terminal-line"></div>
+        </div>
+    </div>
+<!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Resources Modal -->
+    <div id="resourcesModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h1>Data Science Resources 🚀</h1>
+            <div id="resourcesContent">
+                <h2>Learning Platforms</h2>
+                <ul>
+                    <li><a href="https://kaggle.com" target="_blank">Kaggle</a> - Competitions, Datasets & Notebooks</li>
+                    <li><a href="https://fast.ai" target="_blank">Fast.ai</a> - Practical Deep Learning</li>
+                    <li><a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank">Coursera ML Specialization</a> - Andrew Ng's Course</li>
+                    <li><a href="https://www.datacamp.com" target="_blank">DataCamp</a> - Interactive Learning</li>
+                </ul>
+
+                <h2>Research & Papers</h2>
+                <ul>
+                    <li><a href="https://paperswithcode.com" target="_blank">Papers with Code</a> - ML Research with Implementations</li>
+                    <li><a href="https://arxiv.org" target="_blank">ArXiv</a> - Research Paper Repository</li>
+                    <li><a href="https://distill.pub" target="_blank">Distill</a> - Clear ML Explanations</li>
+                    <li><a href="https://www.sciencedirect.com/" target="_blank">Science Direct</a> - More Scientific Papers</li>
+                </ul>
+
+                <h2>Tools & Libraries</h2>
+                <ul>
+                    <li><a href="https://huggingface.co" target="_blank">Hugging Face</a> - AI Models & Datasets</li>
+                    <li><a href="https://wandb.ai" target="_blank">Weights & Biases</a> - ML Experiment Tracking</li>
+                    <li><a href="https://scikit-learn.org" target="_blank">Scikit-Learn</a> - ML Library Documentation</li>
+                    <li><a href="https://pytorch.org" target="_blank">PyTorch</a> - Deep Learning Framework</li>
+                </ul>
+
+                <h2>Blogs & Communities</h2>
+                <ul>
+                    <li><a href="https://towardsdatascience.com" target="_blank">Towards Data Science</a> - Medium Publication</li>
+                    <li><a href="https://kdnuggets.com" target="_blank">KDnuggets</a> - DS News & Tutorials</li>
+                    <li><a href="https://reddit.com/r/MachineLearning" target="_blank">r/MachineLearning</a> - Reddit Community</li>
+                    <li><a href="https://mlops.community" target="_blank">MLOps Community</a> - Production ML</li>
+                </ul>
+
+                <h2>Datasets & Visualization</h2>
+                <ul>
+                    <li><a href="https://datasetsearch.research.google.com" target="_blank">Google Dataset Search</a> - Find Datasets</li>
+                    <li><a href="https://data.gov" target="_blank">Data.gov</a> - US Government Open Data</li>
+                    <li><a href="https://observablehq.com" target="_blank">Observable</a> - Interactive Data Viz</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="terminal.js"></script>
+</body>
+</html>

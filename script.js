@@ -94,7 +94,7 @@ function displayLoadingText() {
 
         // Redirect to your portfolio after the lines have loaded
         setTimeout(() => {
-            window.location.href = 'pages/home.html';
+            window.location.href = 'pages/terminal/terminal_home.html';
         }, 3000 + (matrixLines.length * 500)); // Dynamic delay based on number of lines
 
     }, 2000);

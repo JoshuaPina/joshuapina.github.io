@@ -1,8 +1,29 @@
-// Command history and current state
+/**
+ * Array to store the history of entered commands.
+ * @type {string[]}
+ */
 const commandHistory = [];
+
+/**
+ * Index of the currently selected command in history (for up/down arrow navigation).
+ * @type {number}
+ */
 let historyIndex = -1;
 
-// User data - customize this!
+/**
+ * User configuration data used throughout the terminal.
+ * @type {Object}
+ * @property {string} name - The user's full name.
+ * @property {string} title - The user's professional title.
+ * @property {string} email - The user's email address.
+ * @property {string} github - The user's GitHub profile URL.
+ * @property {string} githubOrg - The user's GitHub Organization URL.
+ * @property {string} linkedin - The user's LinkedIn profile URL.
+ * @property {string} website - The user's website URL.
+ * @property {string} visualPortfolio - URL to the visual portfolio page.
+ * @property {string[]} skills - List of technical skills.
+ * @property {string} about - A short bio or description.
+ */
 const userData = {
     name: "Joshua Piña",
     title: "Husband | Dad | Data Scientist | Program Manager | Army Veteran",
@@ -16,12 +37,28 @@ const userData = {
     about: "The world is a giant graph, and I'm just a guy, traversing node by node, and learning along the way..."
 };
 
-// State management
+/**
+ * Flag indicating if the terminal is waiting for the initial user choice (Terminal vs GUI).
+ * @type {boolean}
+ */
 let awaitingChoice = true;
+
+/**
+ * Flag indicating if normal command processing is enabled.
+ * @type {boolean}
+ */
 let commandsEnabled = false;
 
-// Available commands
+/**
+ * Dictionary of available terminal commands.
+ * Each key is a command name, and the value is a function that executes the command.
+ * @type {Object.<string, function(string[]): (string|null)>}
+ */
 const commands = {
+    /**
+     * Displays a list of available commands.
+     * @returns {string} The help text.
+     */
     help: () => {
         return `
 Available commands:
@@ -39,6 +76,10 @@ Available commands:
         `.trim();
     },
 
+    /**
+     * Redirects the user to the visual portfolio.
+     * @returns {null}
+     */
     gui: () => {
         printOutput('<span class="info">Redirecting to visual portfolio...</span>');
         setTimeout(() => {
@@ -47,6 +88,10 @@ Available commands:
         return null;
     },
 
+    /**
+     * Displays information about the user.
+     * @returns {string} The about me text.
+     */
     about: () => {
         return `
 <span class="success">About Me</span>
@@ -58,6 +103,10 @@ ${userData.about}
         `.trim();
     },
 
+    /**
+     * Displays the user's technical skills.
+     * @returns {string} The formatted skills list.
+     */
     skills: () => {
         const skillsList = userData.skills.map(skill => `  • ${skill}`).join('\n');
         return `
@@ -67,6 +116,10 @@ ${skillsList}
         `.trim();
     },
 
+    /**
+     * Displays contact information.
+     * @returns {string} The contact details.
+     */
     contact: () => {
         return `
 <span class="success">Contact Information</span>
@@ -78,6 +131,10 @@ Feel free to reach out!
         `.trim();
     },
 
+    /**
+     * Displays social media links.
+     * @returns {string} The formatted social links.
+     */
     social: () => {
         return `
 <span class="success">Social Links</span>
@@ -88,6 +145,10 @@ LinkedIn:      <a href="${userData.linkedin}" target="_blank">${userData.linkedi
         `.trim();
     },
 
+    /**
+     * Displays a list of featured projects.
+     * @returns {string} The projects list.
+     */
     projects: () => {
         return `
 <span class="success">Featured Projects</span>
@@ -113,15 +174,28 @@ LinkedIn:      <a href="${userData.linkedin}" target="_blank">${userData.linkedi
         `.trim();
     },
 
+    /**
+     * Clears the terminal output.
+     * @returns {null}
+     */
     clear: () => {
         document.getElementById('terminal').innerHTML = '';
         return null;
     },
 
+    /**
+     * Echoes the provided arguments back to the terminal.
+     * @param {string[]} args - The arguments to echo.
+     * @returns {string} The joined arguments.
+     */
     echo: (args) => {
         return args.join(' ') || '';
     },
 
+    /**
+     * Displays the current date and time.
+     * @returns {string} The date string.
+     */
     date: () => {
         return new Date().toString();
     },
@@ -143,7 +217,13 @@ LinkedIn:      <a href="${userData.linkedin}" target="_blank">${userData.linkedi
     }
 };
 
-// Print output to terminal
+/**
+ * Appends a line of output to the terminal.
+ *
+ * @param {string} output - The HTML content to display.
+ * @param {string} [className=''] - Optional CSS class to apply to the output line.
+ * @returns {void}
+ */
 function printOutput(output, className = '') {
     const terminal = document.getElementById('terminal');
     const line = document.createElement('div');
@@ -153,7 +233,16 @@ function printOutput(output, className = '') {
     terminal.scrollTop = terminal.scrollHeight;
 }
 
-// Process command
+/**
+ * Processes a user command input.
+ *
+ * This function handles the initial choice (Terminal vs GUI) and subsequent
+ * shell commands. It parses the input, looks up the command in the `commands` object,
+ * and executes it or displays an error.
+ *
+ * @param {string} input - The raw input string from the user.
+ * @returns {void}
+ */
 function processCommand(input) {
     const terminal = document.getElementById('terminal');
     
@@ -217,7 +306,14 @@ function processCommand(input) {
     terminal.scrollTop = terminal.scrollHeight;
 }
 
-// Handle input
+/**
+ * Creates a new input line in the terminal and sets up event listeners.
+ *
+ * This function handles user input, command history navigation (Arrow Up/Down),
+ * and tab completion. When Enter is pressed, it processes the command.
+ *
+ * @returns {void}
+ */
 function createInputLine() {
     const terminal = document.getElementById('terminal');
     const inputLine = document.createElement('div');
@@ -277,7 +373,10 @@ document.addEventListener('click', () => {
     if (input) input.focus();
 });
 
-// Terminal button functionality
+/**
+ * Tracks the state of the terminal window (normal or maximized).
+ * @type {string}
+ */
 let terminalState = 'normal';
 
 // Red button - Matrix rain then show resources
@@ -306,7 +405,14 @@ document.querySelector('.btn-maximize').addEventListener('click', (e) => {
     }
 });
 
-// Matrix Rain Effect
+/**
+ * Starts the Matrix rain effect on the terminal canvas.
+ *
+ * This effect runs for a limited time (approx 2 seconds) before fading out
+ * and showing the resources modal.
+ *
+ * @returns {void}
+ */
 function startMatrixRain() {
     const canvas = document.getElementById('matrixCanvas');
     const ctx = canvas.getContext('2d');
@@ -360,11 +466,18 @@ function startMatrixRain() {
     draw();
 }
 
-// Show/Hide Resources Modal
+/**
+ * Displays the resources modal.
+ * @returns {void}
+ */
 function showResourcesModal() {
     document.getElementById('resourcesModal').style.display = 'block';
 }
 
+/**
+ * Hides the resources modal.
+ * @returns {void}
+ */
 function hideResourcesModal() {
     document.getElementById('resourcesModal').style.display = 'none';
 }

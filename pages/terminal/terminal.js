@@ -124,6 +124,22 @@ LinkedIn:      <a href="${userData.linkedin}" target="_blank">${userData.linkedi
 
     date: () => {
         return new Date().toString();
+    },
+
+    '1': () => {
+        return '<span class="success">You\'re already in terminal mode!</span> Type <span class="info">\'help\'</span> to see available commands.';
+    },
+
+    '2': () => {
+        return commands.gui();
+    },
+
+    terminal: () => {
+        return '<span class="success">You\'re already in terminal mode!</span> Type <span class="info">\'help\'</span> to see available commands.';
+    },
+
+    visual: () => {
+        return commands.gui();
     }
 };
 

@@ -1,5 +1,18 @@
+/**
+ * Flag to track if the matrix animation is currently active.
+ * @type {boolean}
+ */
 let matrixActive = false;
 
+/**
+ * Initiates the Matrix entry sequence.
+ *
+ * This function handles the transition from the landing page to the matrix effect.
+ * It hides the initial content, fades to black, starts the matrix rain animation,
+ * and then triggers the display of the loading text.
+ *
+ * @returns {void}
+ */
 function enterMatrix() {
     if (matrixActive) return;
     matrixActive = true;
@@ -27,6 +40,14 @@ function enterMatrix() {
     }, 1000);
 }
 
+/**
+ * Starts the Matrix digital rain animation on the canvas.
+ *
+ * This function initializes the canvas, sets up the columns and drops,
+ * and starts the animation loop that draws the falling characters.
+ *
+ * @returns {void}
+ */
 function startMatrixRain() {
     const canvas = document.getElementById('matrixCanvas');
     const ctx = canvas.getContext('2d');
@@ -44,6 +65,9 @@ function startMatrixRain() {
 
     const matrixChars = "0100101001010101001001111001010101010";
 
+    /**
+     * Draws a single frame of the matrix rain animation.
+     */
     function draw() {
         // Semi-transparent black background for a strong trail effect
         ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -68,7 +92,15 @@ function startMatrixRain() {
     setInterval(draw, 33);
 }
 
-// New function to display text sequentially
+/**
+ * Displays the loading text sequentially with a matrix-style reveal.
+ *
+ * This function manages the timing of revealing the welcome text,
+ * the matrix interface, and the individual loading lines. Finally,
+ * it redirects the user to the terminal home page.
+ *
+ * @returns {void}
+ */
 function displayLoadingText() {
     const welcomeText = document.getElementById('welcomeText');
     const matrixInterface = document.getElementById('matrixInterface');

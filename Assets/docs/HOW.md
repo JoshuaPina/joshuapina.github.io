@@ -1,0 +1,5 @@
+- Idea to create wikipedia page
+- Tried to figure out how to create the wiki page
+ - Instead of starting from scratch or relying completely on AI...
+    - View page source was used to grab the html
+    - inspect - network was used to grab the css, refreshed page, grabbed from css tab then @response

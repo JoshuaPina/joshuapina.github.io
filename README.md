@@ -1,71 +1,108 @@
 # Joshua Piña's Portfolio
 
-Welcome to the Dojo! This is the personal portfolio website of **Joshua Piña**, a Data Scientist, Program Manager, and Army Veteran. The site features a Matrix-themed landing page and an interactive terminal interface, showcasing technical skills, projects, and professional background.
+Welcome to the repository for the personal portfolio of **Joshua Piña**, a Data Scientist, Program Manager, and U.S. Army Veteran.
 
-## Features
+> **Note:** This repository is currently in transition. The portfolio has been replaced with a Wikipedia-styled biographical page while the original Matrix-themed experience is being redesigned and merged. The original version is preserved on the `original-portfolio` branch.
 
-*   **Matrix Landing Page**: An immersive entry experience with the iconic digital rain effect.
-*   **Interactive Terminal**: A command-line interface that allows visitors to explore the portfolio using shell-like commands.
-*   **Visual Portfolio**: A traditional graphical user interface (GUI) version of the portfolio for those who prefer standard navigation.
-*   **Resume & Resources**: Easy access to resume and other professional resources.
-*   **Responsive Design**: Works on desktop and mobile devices.
+---
 
-## Project Structure
+## Current Version — Wikipedia-Style Portfolio
 
-*   `index.html`: The main entry point featuring the Matrix landing page.
-*   `script.js`: Handles the Matrix rain animation and entry logic.
-*   `styles.css`: Main styles for the landing page.
-*   `pages/`: Contains HTML files for various sections of the portfolio.
-    *   `terminal/`: The interactive terminal implementation.
-        *   `terminal_home.html`: The HTML structure for the terminal.
-        *   `terminal.js`: Logic for the terminal commands and interaction.
-        *   `terminal.css`: Styling for the terminal interface.
-    *   `home.html`, `aboutme.html`, `projects.html`, etc.: Pages for the visual portfolio.
-*   `data/`: Stores downloadable resources like resumes (PDFs).
-*   `images/`: Contains images used throughout the site.
+The live site at [joshuapina.github.io](https://joshuapina.github.io) currently features a Wikipedia-styled biographical portfolio page, built entirely with HTML, CSS, and vanilla JavaScript — no frameworks or dependencies.
 
-## Setup & Usage
+### Pages
 
-### Running Locally
+| File | Description | Status |
+|---|---|---|
+| `index.html` | Main biography page (Wikipedia style) | ✅ Live |
+| `contact.html` | Contact methods and professional links | ✅ Live |
+| `under-construction.html` | Placeholder for pages in development | ✅ Live |
 
-To run this project locally, you can serve the files using a simple HTTP server.
+### Current Features
 
-**Using Python:**
+- **Wikipedia skin** — Faithful recreation of the Vector 2022 Wikipedia layout, including infobox, table of contents, hatnotes, reference citations, and side-boxes
+- **Google Translate** — English, Spanish, and French via the Google Translate widget, positioned in the article title bar
+- **GitHub search** — Search bar scoped to `JoshuaPina` and `gsu-ds` GitHub organizations via the GitHub search API
+- **Dynamic dates** — Relative timestamps ("6 months ago") and copyright year calculated at page load via JavaScript
+- **Inline repo links** — Each project section links directly to its corresponding GitHub repository
+- **Further Repositories** — Dedicated section listing all public repos with descriptions
+- **Responsive assets** — Profile photo, signature wordmark, and school logos
 
-1.  Open your terminal or command prompt.
-2.  Navigate to the project's root directory.
-3.  Run the following command:
+### Asset Structure
 
-    ```bash
-    python3 -m http.server
-    ```
+```
+Assets/
+├── css/
+│   ├── wiki.css          # Wikipedia Vector 2022 base styles
+│   └── wikis.css         # Supplementary skin styles
+└── images/
+```
+---
 
-4.  Open your browser and visit `http://localhost:8000`.
+## Previous Version — Matrix-Themed Portfolio (preserved on `original-portfolio` branch)
 
-**Using VS Code Live Server:**
+The original portfolio featured an immersive Matrix-themed landing page and interactive terminal interface.
 
-1.  Open the project folder in VS Code.
-2.  Install the "Live Server" extension.
-3.  Right-click on `index.html` and select "Open with Live Server".
+### Features (to be re-integrated)
 
-### Navigating the Terminal
+- **Matrix Landing Page** — Digital rain animation entry experience
+- **Interactive Terminal** — Command-line interface for exploring the portfolio (`help`, `about`, `skills`, `projects`, `contact`, `social`, `gui`, `clear`, `date`, `echo`)
+  - Tab autocompletion and command history navigation
+- **Visual Portfolio (GUI mode)** — Traditional graphical interface as an alternative to the terminal
+- **Resume & Resources** — Downloadable resume and professional documents
 
-Once you enter the Matrix, you will be presented with a terminal interface. Use the keyboard to type commands.
+### Previous Structure
 
-**Available Commands:**
+```
+index.html              # Matrix landing page entry point
+script.js               # Matrix rain animation and entry logic
+styles.css              # Landing page styles
+pages/
+├── terminal/
+│   ├── terminal_home.html
+│   ├── terminal.js
+│   └── terminal.css
+├── home.html
+├── aboutme.html
+└── projects.html
+data/                   # Downloadable resources (PDFs, resumes)
+images/                 # Site images
+```
 
-*   `help`: Show the list of available commands.
-*   `about`: Learn more about Joshua Piña.
-*   `skills`: View technical skills.
-*   `projects`: Browse featured projects.
-*   `contact`: Display contact information.
-*   `social`: View social media links.
-*   `gui`: Switch to the visual portfolio (GUI mode).
-*   `clear`: Clear the terminal screen.
-*   `date`: Show the current date and time.
-*   `echo [text]`: Echo back the provided text.
+---
 
-**Tips:**
+## Planned Features
 
-*   Use `Tab` for command autocompletion.
-*   Use `Arrow Up` and `Arrow Down` to navigate through command history.
+The following will be developed and merged in a future update:
+
+- [ ] **Blog** — Technical writing, career reflections, and data science commentary
+- [ ] **Recent Projects** — Live project updates and works-in-progress
+- [ ] **The Primer** — Curated resource guide for data science fundamentals
+- [ ] **Merged landing experience** — Matrix entry page re-integrated with the Wikipedia-style biography
+- [ ] **Terminal re-integration** — Interactive terminal accessible from the main portfolio
+- [ ] **Dark mode** — Toggle between light and dark Wikipedia skin
+
+---
+
+## Running Locally
+
+Serve the files using a simple HTTP server from the project root:
+
+**Python:**
+```bash
+python3 -m http.server
+```
+Then visit `http://localhost:8000`.
+
+**VS Code Live Server:**
+1. Install the "Live Server" extension
+2. Right-click `index.html` → "Open with Live Server"
+
+---
+
+## Branches
+
+| Branch | Description |
+|---|---|
+| `main` | Current live site (Wikipedia-style portfolio) |
+| `original-portfolio` | Original Matrix-themed portfolio, preserved for future merging |

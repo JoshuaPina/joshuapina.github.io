@@ -1,0 +1,58 @@
+/* WIKIPEDIA CORE THEME */
+:root {
+    --bg: #fff;
+    --text: #202122;
+    --border: #a2a9b1;
+    --accent: #36c;
+}
+
+body.dark-mode {
+    --bg: #101418;
+    --text: #eaecf0;
+    --border: #54595d;
+    --accent: #6ea1ff;
+}
+
+body { background: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; }
+
+/* FIX: THE GRID SYSTEM */
+.mw-page-container-inner {
+    display: grid !important;
+    grid-template-columns: 12rem minmax(0, 1fr) !important; /* Forces Sidebar width */
+    grid-template-areas: 'columnStart pageContent' !important;
+    max-width: 99.75rem;
+    margin: 0 auto;
+    column-gap: 36px;
+    padding: 1.5rem;
+}
+
+.vector-column-start { grid-area: columnStart !important; }
+.mw-content-container { grid-area: pageContent !important; }
+
+/* HEADER LOGIC */
+.vector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.appearance-controls, .user-links-list { display: flex; gap: 10px; align-items: center; list-style: none; margin: 0; padding: 0; }
+.nav-label { font-size: 0.75rem; color: #54595d; }
+
+/* INFOBOX & ZOOM */
+.infobox { border: 1px solid var(--border); float: right; margin: 0 0 1em 1em; width: 22em; background: #f8f9fa; padding: 5px; }
+.wiki-zoom-wrapper { overflow: visible; position: relative; }
+.wiki-zoom-wrapper img { width: 100%; transition: transform 0.4s ease; cursor: zoom-in; }
+.wiki-zoom-wrapper img:hover { transform: scale(1.7); z-index: 100; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+/* UI ELEMENTS */
+.firstHeading { font-family: serif; font-size: 1.8rem; border-bottom: 1px solid var(--border); margin-bottom: 0.5rem; font-weight: normal; }
+h2 { border-bottom: 1px solid var(--border); font-weight: normal; margin-top: 1.5rem; }
+.hatnote { border: 1px solid var(--border); padding: 5px; font-size: 0.8rem; margin-bottom: 1rem; background: #fcfcfc; }
+.mw-footer { border-top: 1px solid var(--border); margin-top: 50px; font-size: 0.75rem; }
+
+/* BUTTONS */
+.cdx-button { border: 1px solid var(--border); background: #f8f9fa; cursor: pointer; padding: 4px 8px; font-size: 0.8rem; }
+.cdx-button-submit { background: var(--accent); color: white; border: none; padding: 10px; cursor: pointer; }

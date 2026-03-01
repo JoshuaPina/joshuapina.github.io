@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1120">
+    <meta property="og:title" content="Joshua D. Piña — Data Science Portfolio">
+    <meta property="og:description" content="Data Scientist, Program Manager, and U.S. Army Veteran. GSU graduate specializing in ML pipelines, ethical AI, and end-to-end data systems.">
+    <meta property="og:image" content="https://joshuapina.github.io/Assets/images/Pina-Suit-Profile-Pic.jpg">
+    <meta property="og:url" content="https://joshuapina.github.io/">
+    <meta property="og:type" content="website">
     <title>Joshua Piña (v5) - Data Science Portfolio</title>
 
     <link rel="stylesheet" href="Assets/css/wiki.css">
     <link rel="stylesheet" href="Assets/css/wikis.css">
     <link rel="icon" href="Assets/images/Pina-Suit-Profile-Pic.jpg" type="image/jpg">
 
-    <!-- Google Translate -->
     <script type="text/javascript">
         function googleTranslateInit() {
             new google.translate.TranslateElement({
@@ -24,11 +28,7 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
 
     <style>
-        /* Translate widget styling to blend with Wikipedia theme */
-        #google_translate_element {
-            display: inline-block;
-            vertical-align: middle;
-        }
+        #google_translate_element { display: inline-block; vertical-align: middle; }
         #google_translate_element select {
             font-size: 0.85em;
             border: 1px solid #a2a9b1;
@@ -38,7 +38,88 @@
             color: #202122;
         }
         .goog-te-banner-frame { display: none !important; }
-        body { top: 0 !important; }
+        body { top: 0 !important; scroll-behavior: smooth; }
+
+        .hatnote {
+            font-style: italic;
+            font-size: 0.85em;
+            color: #54595d;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1.2em;
+            margin-top: 0.5em;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .project-links a:hover { text-decoration: underline; }
+
+        .personal-links-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1.4em;
+            margin: 0.6em 0 0.2em 0;
+            font-size: 0.95em;
+            align-items: center;
+        }
+        .personal-links-bar a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #0645ad;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .personal-links-bar a:hover { text-decoration: underline; }
+        .personal-links-bar .sep { color: #a2a9b1; user-select: none; }
+
+        /* Wikipedia-style navbox */
+        .navbox {
+            border: 1px solid #a2a9b1;
+            background-color: #f8f9fa;
+            width: 100%;
+            margin: 1em 0;
+            font-size: 0.875em;
+            border-collapse: collapse;
+        }
+        .navbox td, .navbox th {
+            padding: 4px 8px;
+            vertical-align: middle;
+        }
+        .navbox-title {
+            background-color: #cee0f2;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.05em;
+            padding: 4px;
+            color: #202122;
+        }
+        .navbox-group {
+            background-color: #ddeeff;
+            font-weight: bold;
+            text-align: right;
+            white-space: nowrap;
+            padding: 4px 8px;
+            border-right: 1px solid #a2a9b1;
+            min-width: 90px;
+            color: #202122;
+        }
+        .navbox-list {
+            text-align: left;
+            padding: 4px 8px;
+            border-top: 1px solid #a2a9b1;
+        }
+        .navbox-list a { color: #0645ad; }
+        .navbox-list a:hover { text-decoration: underline; }
+        .navbox-sep { color: #a2a9b1; margin: 0 4px; }
     </style>
 </head>
 
@@ -55,7 +136,7 @@
                         title="Main menu">
                         <input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button"
                             aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown"
-                            class="vector-dropdown-checkbox " aria-label="Main menu">
+                            class="vector-dropdown-checkbox" aria-label="Main menu">
                         <label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox"
                             class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only"
                             aria-hidden="true">
@@ -80,10 +161,9 @@
                                         <div class="vector-menu-content">
                                             <ul class="vector-menu-content-list">
                                                 <li id="n-mainpage-description" class="mw-list-item"><a href="https://joshuapina.github.io/" title="Visit the main page [z]" accesskey="z"><span>Home</span></a></li>
-                                                <li id="n-contents" class="mw-list-item"><a href="https://github.com/gsu-ds" title="Guides to browsing Wikipedia"><span>[GSU-DS] Organization</span></a></li>
-                                         
-                                                <li id="n-randompage" class="mw-list-item"><a href="https://github.com/JoshuaPina" title="Visit a randomly selected article [x]" accesskey="x"><span>Recent Projects (Back to GitHub)</span></a></li>
-                                                <li id="n-aboutsite" class="mw-list-item"><a href="construction.html" title="Learn about Wikipedia and how it works"><span>Blog (Under Construction)</span></a></li>
+                                                <li id="n-contents" class="mw-list-item"><a href="https://github.com/gsu-ds" title="GSU-DS GitHub Organization"><span>[GSU-DS] Organization</span></a></li>
+                                                <li id="n-randompage" class="mw-list-item"><a href="https://github.com/JoshuaPina" title="GitHub Profile" accesskey="x"><span>GitHub Profile</span></a></li>
+                                                <li id="n-aboutsite" class="mw-list-item"><a href="construction.html" title="Blog (Under Construction)"><span>Blog (Under Construction)</span></a></li>
                                                 <li id="n-contactpage" class="mw-list-item"><a href="contact.html" title="How to contact Joshua Piña"><span>Contact</span></a></li>
                                             </ul>
                                         </div>
@@ -103,12 +183,11 @@
             </div>
 
             <div class="vector-header-end">
-
                 <div id="p-search" role="search"
                     class="vector-search-box-vue vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
                     <a href="/wiki/Special:Search"
                         class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle"
-                        title="Search Wikipedia [f]" accesskey="f">
+                        title="Search Portfolio [f]" accesskey="f">
                         <span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
                         <span>Search</span>
                     </a>
@@ -135,13 +214,16 @@
                         <div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet">
                             <div class="vector-menu-content">
                                 <ul class="vector-menu-content-list">
-                                    <li id="pt-sitesupport-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item">
+                                    <li id="pt-resume" class="user-links-collapsible-item mw-list-item">
+                                        <a data-mw-interface href="Assets/docs/resume.pdf" title="Joshua Piña Resume" target="_blank" rel="noopener"><span>Resume</span></a>
+                                    </li>
+                                    <li id="pt-sitesupport-2" class="user-links-collapsible-item mw-list-item">
                                         <a data-mw-interface href="https://linkedin.com/in/joshuadpina" target="_blank" rel="noopener"><span>LinkedIn</span></a>
                                     </li>
-                                    <li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item">
+                                    <li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item">
                                         <a data-mw-interface href="https://meritpages.com/JoshuaPina" title="My GSU Merit Page" target="_blank" rel="noopener"><span>Merit Page</span></a>
                                     </li>
-                                    <li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item">
+                                    <li id="pt-login-2" class="user-links-collapsible-item mw-list-item">
                                         <a data-mw-interface href="https://joshuapina.github.io/living_library/" target="_blank" rel="noopener" title="My study resource database"><span>The Living Library</span></a>
                                     </li>
                                 </ul>
@@ -176,69 +258,64 @@
                                     <h2 class="vector-pinnable-header-label">Contents</h2>
                                 </div>
                                 <ul class="vector-toc-contents" id="mw-panel-toc-list">
-                                    <li id="toc-mw-content-text" class="vector-toc-list-item vector-toc-level-1">
+                                    <li class="vector-toc-list-item vector-toc-level-1">
                                         <a href="#" class="vector-toc-link"><div class="vector-toc-text">(Top)</div></a>
                                     </li>
-                                    <li id="toc-Early_life" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#Early_life">
                                             <div class="vector-toc-text"><span class="vector-toc-numb">1</span><span>Early Life</span></div>
                                         </a>
                                     </li>
-                                    <li id="toc-Military_career" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#Military_career">
                                             <div class="vector-toc-text"><span class="vector-toc-numb">2</span><span>Military Career</span></div>
                                         </a>
                                     </li>
-                                    <li id="toc-Education" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#Education">
                                             <div class="vector-toc-text"><span class="vector-toc-numb">3</span><span>Education</span></div>
                                         </a>
                                     </li>
-                                    <li id="toc-Projects" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#Projects">
                                             <div class="vector-toc-text"><span class="vector-toc-numb">4</span><span>Projects</span></div>
                                         </a>
                                     </li>
-                                    <li id="toc-Personal_life" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#Personal_life">
                                             <div class="vector-toc-text"><span class="vector-toc-numb">5</span><span>Personal Life</span></div>
                                         </a>
-                                        <ul id="toc-Personal_life-sublist" class="vector-toc-list">
-                                            <li id="toc-Hobbies" class="vector-toc-list-item vector-toc-level-2">
+                                        <ul class="vector-toc-list">
+                                            <li class="vector-toc-list-item vector-toc-level-2">
                                                 <a class="vector-toc-link" href="#Hobbies">
                                                     <div class="vector-toc-text"><span class="vector-toc-numb">5.1</span><span>Hobbies</span></div>
                                                 </a>
                                             </li>
-                                            <li id="toc-Family" class="vector-toc-list-item vector-toc-level-2">
+                                            <li class="vector-toc-list-item vector-toc-level-2">
                                                 <a class="vector-toc-link" href="#Family">
                                                     <div class="vector-toc-text"><span class="vector-toc-numb">5.2</span><span>Family</span></div>
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li id="toc-Certifications" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#Certifications">
                                             <div class="vector-toc-text"><span class="vector-toc-numb">6</span><span>Professional Certifications</span></div>
                                         </a>
                                     </li>
-                                    <li id="toc-Notes" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
-                                        <a class="vector-toc-link" href="#Notes">
-                                            <div class="vector-toc-text"><span class="vector-toc-numb">7</span><span>Notes</span></div>
-                                        </a>
-                                    </li>
-                                    <li id="toc-Further_repositories" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
-                                        <a class="vector-toc-link" href="#Further_repositories">
-                                            <div class="vector-toc-text"><span class="vector-toc-numb">8</span><span>Further repositories</span></div>
-                                        </a>
-                                    </li>
-                                    <li id="toc-Further_reading" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#Further_reading">
-                                            <div class="vector-toc-text"><span class="vector-toc-numb">9</span><span>Further reading</span></div>
+                                            <div class="vector-toc-text"><span class="vector-toc-numb">7</span><span>Further Reading and Resources</span></div>
                                         </a>
                                     </li>
-                                    <li id="toc-External_links" class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
                                         <a class="vector-toc-link" href="#External_links">
-                                            <div class="vector-toc-text"><span class="vector-toc-numb">10</span><span>External links</span></div>
+                                            <div class="vector-toc-text"><span class="vector-toc-numb">8</span><span>External Links</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+                                        <a class="vector-toc-link" href="#Notes">
+                                            <div class="vector-toc-text"><span class="vector-toc-numb">9</span><span>Notes</span></div>
                                         </a>
                                     </li>
                                 </ul>
@@ -268,9 +345,8 @@
                         <div id="mw-content-text" class="mw-body-content">
                             <div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr">
 
-                                <div role="note" class="hatnote navigation-not-searchable">Welcome to my portfolio. For the breakdown on how this was made, see <a href="Assets\docs\HOW.md" title="Wikipedia Styled Portfolio">Wikipedia Styled Portfolio (Running Notes)</a>.</div>
+                                <div role="note" class="hatnote navigation-not-searchable">Welcome to my portfolio. For the breakdown on how this was made, see <a href="Assets/docs/HOW.md" title="Wikipedia Styled Portfolio">Wikipedia Styled Portfolio (Running Notes)</a>.</div>
 
-                                <!-- INFOBOX -->
                                 <table class="infobox vcard">
                                     <caption class="infobox-title fn org">
                                         <span class="skin-invert" typeof="mw:File">
@@ -292,7 +368,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row" class="infobox-label">
-                                                <div style="display: inline-block; line-height: 1.2em; padding: .1em 0;">Type of site</div>
+                                                <div style="display:inline-block; line-height:1.2em; padding:.1em 0;">Type of site</div>
                                             </th>
                                             <td class="infobox-data"><a href="https://joshuapina.github.io/" title="Virtual Portfolio">Virtual portfolio</a></td>
                                         </tr>
@@ -332,94 +408,86 @@
                                         </tr>
                                         <tr>
                                             <th scope="row" class="infobox-label">Written&#160;in</th>
-                                            <td class="infobox-data"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS">CSS</a>, &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript">JS</a></td>
+                                            <td class="infobox-data">
+                                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="HTML">HTML</a>,
+                                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS">CSS</a>, &amp;
+                                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript">JS</a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
 
                                 <p>
                                     <b>Joshua Darius Piña</b> is an American Data Scientist, Program Manager, and U.S. Army Veteran.
-                                    A recent <a href="https://gsu.edu" target="_blank" rel="noopener" title="Georgia State University">Georgia State University</a> graduate, he is credited with leading his senior Capstone projects in Data Science and Machine Learning.
-                                    Joshua holds a current Secret security clearance and is a strong advocate for ethical data practices and the implementation of robust, end-to-end ML pipelines to ensure application efficacy.
+                                    A recent <a href="https://gsu.edu" target="_blank" rel="noopener" title="Georgia State University">Georgia State University</a> graduate, he is credited with leading his senior capstone projects in Data Science and Machine Learning.
+                                    Joshua holds a current <a href="https://en.wikipedia.org/wiki/Security_clearance" target="_blank" rel="noopener" title="Security Clearance">Secret security clearance</a> and is a strong advocate for ethical data practices and the implementation of robust, end-to-end ML pipelines to ensure application efficacy.
                                 </p>
 
                                 <meta property="mw:PageProp/toc" />
 
-                                <!-- ======================== EARLY LIFE ======================== -->
                                 <div class="mw-heading mw-heading2">
                                     <h2 id="Early_life">Early Life</h2>
                                 </div>
 
-                                <p>Joshua D. Piña was born in <a href="https://en.wikipedia.org/wiki/Coral_Springs,_Florida" target="_blank" rel="noopener">Coral Springs, Florida</a> in the late 20th century. He was raised with an emphasis on disciplined and selfless service, open-ended thinking, and evidence-based problem-solving.
-                                    As a gifted student, he was awarded the prestigious Accelerated Reader award in 7th grade.
+                                <p>Joshua D. Piña was born in <a href="https://en.wikipedia.org/wiki/Coral_Springs,_Florida" target="_blank" rel="noopener">Coral Springs, Florida</a> in the late 20th century. He was raised with an emphasis on disciplined and selfless service, open-ended thinking, and evidence-based problem-solving. As a gifted student, he was awarded the prestigious Accelerated Reader award in 7th grade.
                                     <br><br>
-                                    While attending <a href="https://en.wikipedia.org/wiki/Coconut_Creek_High_School" target="_blank" rel="noopener">Coconut Creek High School</a>, he joined the National Honor Society, Animal Rights Club, and <a href="https://www.hosa.org/" target="_blank" rel="noopener" title="Health Occupation Students of America">HOSA</a> (Health Occupation Students of America), while being a member of the baseball team.
-                                    Prior to his academic career in data analytics and computational sciences, his background as a pre-med student at <a href="https://www.broward.edu/" target="_blank" rel="noopener" title="Broward College">Broward College</a> led him to enlisting in the army as a 68W (Combat Medic/Healthcare Specialist).
+                                    While attending <a href="https://en.wikipedia.org/wiki/Coconut_Creek_High_School" target="_blank" rel="noopener">Coconut Creek High School</a>, he joined the <a href="https://www.nhs.us/" target="_blank" rel="noopener" title="National Honor Society">National Honor Society</a>, Animal Rights Club, and <a href="https://www.hosa.org/" target="_blank" rel="noopener" title="Health Occupation Students of America">HOSA</a> (Health Occupation Students of America), while being a member of the baseball team.
+                                    Prior to his academic career in data analytics and computational sciences, his background as a pre-med student at <a href="https://www.broward.edu/" target="_blank" rel="noopener" title="Broward College">Broward College</a> led him to enlisting in the army as a <a href="https://www.goarmy.com/careers-and-jobs/career-match/medical/treating-patients/68w-combat-medic-specialist" target="_blank" rel="noopener" title="68W Combat Medic Specialist">68W (Combat Medic/Healthcare Specialist)</a>.
                                 </p>
 
-                                <!-- ======================== MILITARY CAREER ======================== -->
                                 <div class="mw-heading mw-heading2">
                                     <h2 id="Military_career">Military Career</h2>
                                 </div>
 
-                                <p>Piña served as a Healthcare Specialist (Combat Medic) in the <b><a href="https://www.army.mil/" target="_blank" rel="noopener" title="United States Army">United States Army</a></b> from January 2017 to April 2022.
+                                <p>Piña served as a Healthcare Specialist (Combat Medic) in the <a href="https://www.army.mil/" target="_blank" rel="noopener" title="United States Army">United States Army</a> from January 2017 to April 2022.
                                     He successfully completed Basic Combat Training (BCT) at <a href="https://en.wikipedia.org/wiki/Fort_Leonard_Wood" target="_blank" rel="noopener">Fort Leonard Wood</a>, Missouri and Initial Entry Training (IET) at <a href="https://en.wikipedia.org/wiki/Fort_Sam_Houston" target="_blank" rel="noopener">Fort Sam Houston</a>, Texas.
                                     <br><br>
-                                    Stationed primarily at <a href="https://en.wikipedia.org/wiki/Fort_Moore" target="_blank" rel="noopener">Fort Benning</a>, Georgia, Piña served as a combat medic with 4th Ranger Training Battalion (4th RTB), 316th Cavalry Brigade (316th Cav), and the 197th Infantry Brigade (197th Inf).
-                                    He also spent 3 months working as the lead medic for the Miami <a href="https://www.mepcom.army.mil/" target="_blank" rel="noopener" title="Military Entrance Processing Station">Military Entrance Processing Station (MEPS)</a>. During his service, he served as both a team and squad leader. March 2021, after successful completion of the United States Army <a href="https://en.wikipedia.org/wiki/Basic_Leader_Course" target="_blank" rel="noopener">BLC (Basic Leader Course)</a>, he was promoted to Sergeant.
+                                    Stationed primarily at <a href="https://en.wikipedia.org/wiki/Fort_Moore" target="_blank" rel="noopener">Fort Benning</a>, Georgia, Piña served as a combat medic with the <a href="https://en.wikipedia.org/wiki/Ranger_Training_Brigade" target="_blank" rel="noopener" title="Ranger Training Brigade">4th Ranger Training Battalion (4th RTB)</a>, <a href="https://en.wikipedia.org/wiki/316th_Cavalry_Brigade" target="_blank" rel="noopener" title="316th Cavalry Brigade">316th Cavalry Brigade (316th Cav)</a>, and the <a href="https://en.wikipedia.org/wiki/197th_Infantry_Brigade_(United_States)" target="_blank" rel="noopener" title="197th Infantry Brigade">197th Infantry Brigade (197th Inf)</a>.
+                                    He also spent 3 months working as the lead medic for the Miami <a href="https://www.mepcom.army.mil/" target="_blank" rel="noopener" title="Military Entrance Processing Station">Military Entrance Processing Station (MEPS)</a>. During his service, he served as both a team and squad leader. In March 2021, after successful completion of the United States Army <a href="https://en.wikipedia.org/wiki/Basic_Leader_Course" target="_blank" rel="noopener">BLC (Basic Leader Course)</a>, he was promoted to <a href="https://en.wikipedia.org/wiki/Sergeant#United_States" target="_blank" rel="noopener" title="Sergeant, U.S. Army">Sergeant</a>.
                                     <br><br>
                                     Piña was responsible for managing medical records for over 5,000 personnel and oversaw &gt;$100,000 in critical medical supplies and logistics while working directly with command teams and Nurse Practitioners within the Garrison setting.
-                                    His time as a medical Non-commissioned Officer emphasized command-level reporting and operational coordination, skills he later applied to program management in the public sector.
+                                    His time as a medical <a href="https://en.wikipedia.org/wiki/Non-commissioned_officer" target="_blank" rel="noopener" title="Non-commissioned Officer">Non-commissioned Officer</a> emphasized command-level reporting and operational coordination, skills he later applied to program management in the public sector.
                                     This period of his life provided the groundwork for his eventual transition into Data Science, where he advocates for ethical AI development and rigorous documentation standards.
                                 </p>
 
-                                <!-- ======================== EDUCATION ======================== -->
                                 <div class="mw-heading mw-heading2">
                                     <h2 id="Education">Education</h2>
                                 </div>
 
-                                <!-- Stacked school logos: float LEFT, compact, no extra whitespace -->
                                 <div class="thumb tleft" style="float:left; clear:left; margin: 0 1.5em 0.5em 0; width:170px;">
                                     <div class="thumbinner" style="width:170px;">
-                                        <!-- CSU -->
                                         <div style="border:1px solid #c8ccd1; background:#fff; padding:4px; margin-bottom:4px;">
                                             <a href="Assets/images/csu_logo.jpg" class="mw-file-description">
-                                                <img src="Assets/images/csu_logo.jpg" decoding="async" width="160" height="90"
-                                                    style="display:block; object-fit:contain;" alt="Columbus State University logo" />
+                                                <img src="Assets/images/csu_logo.jpg" decoding="async" width="160" height="90" style="display:block; object-fit:contain;" alt="Columbus State University logo" />
                                             </a>
-                                            <div class="thumbcaption" style="font-size:0.85em; padding-top:3px;"><strong>CSU Primary Logo</strong></div>
+                                            <div class="thumbcaption" style="font-size:0.85em; padding-top:3px;">CSU Primary Logo</div>
                                         </div>
-                                        <!-- GSU -->
                                         <div style="border:1px solid #c8ccd1; background:#fff; padding:4px;">
                                             <a href="Assets/images/gsu_logo.jpg" class="mw-file-description">
-                                                <img src="Assets/images/gsu_logo.jpg" decoding="async" width="160" height="90"
-                                                    style="display:block; object-fit:contain;" alt="Georgia State University logo" />
+                                                <img src="Assets/images/gsu_logo.jpg" decoding="async" width="160" height="90" style="display:block; object-fit:contain;" alt="Georgia State University logo" />
                                             </a>
-                                            <div class="thumbcaption" style="font-size:0.85em; padding-top:3px;"><strong>GSU Primary Logo</strong></div>
+                                            <div class="thumbcaption" style="font-size:0.85em; padding-top:3px;">GSU Primary Logo</div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- GSU Graduation photo: float RIGHT, persists into Projects -->
                                 <figure class="mw-default-size" typeof="mw:File/Thumb"
                                     style="float:right; clear:right; margin: 0 0 1em 1.5em; width:200px;">
                                     <a href="Assets/images/gsu.jpeg" class="mw-file-description">
-                                        <img src="Assets/images/gsu.jpeg" decoding="async" width="200" height="300"
-                                            style="display:block; object-fit:cover;" class="mw-file-element" />
+                                        <img src="Assets/images/gsu.jpeg" decoding="async" width="200" height="300" style="display:block; object-fit:cover;" class="mw-file-element" />
                                     </a>
-                                    <figcaption><strong>GSU Graduation</strong> <em>(colorized)</em>;<br>circa early 21st century</figcaption>
+                                    <figcaption>GSU Graduation <em>(colorized)</em>;<br>circa early 21st century</figcaption>
                                 </figure>
 
-                                <p>Piña holds a <b>Bachelor of Science in Data Science</b> from <b><a href="https://gsu.edu" target="_blank" rel="noopener" title="Georgia State University">Georgia State University</a></b> (GSU), where he graduated in December 2025.
-                                    While at GSU, he excelled at courses based on Applied Statistics, Data Mining, <a href="https://en.wikipedia.org/wiki/Big_data" target="_blank" rel="noopener">Big Data</a> Programming, Machine Learning, and Database Systems.
+                                <p>Piña holds a Bachelor of Science in Data Science from <a href="https://gsu.edu" target="_blank" rel="noopener" title="Georgia State University">Georgia State University</a> (GSU), where he graduated in December 2025.
+                                    While at GSU, he excelled at courses based on Applied Statistics, <a href="https://en.wikipedia.org/wiki/Data_mining" target="_blank" rel="noopener" title="Data Mining">Data Mining</a>, <a href="https://en.wikipedia.org/wiki/Big_data" target="_blank" rel="noopener">Big Data</a> Programming, Machine Learning, and Database Systems.
                                     As a proud polymath, he chose electives geared at broadening his knowledge base, and elected to take courses such as Web Development, Digital Image Processing, and System-Level Programming.
-                                    A multi-term recipient of the <b>Dean's List</b> award (Spring 2024–Fall 2025)<sup><a href="#cite_note-merit-1">[1]</a></sup>, he was also a member of <a href="https://www.colorstack.org/" target="_blank" rel="noopener" title="ColorStack">ColorStack</a> and the <a href="https://www.nsdc.uta.edu/" target="_blank" rel="noopener" title="National Student Data Corps">National Student Data Corps (NSDC)</a>.
+                                    A multi-term recipient of the <a href="https://registrar.gsu.edu/academic-records/deans-list/" target="_blank" rel="noopener" title="GSU Dean's List">Dean's List</a> award (Spring 2024–Fall 2025)<sup><a href="#cite_note-merit-1">[1]</a></sup>, he was also a member of <a href="https://www.colorstack.org/" target="_blank" rel="noopener" title="ColorStack">ColorStack</a> and the <a href="https://www.nsdc.uta.edu/" target="_blank" rel="noopener" title="National Student Data Corps">National Student Data Corps (NSDC)</a>.
                                     <br><br>
-                                    During his senior year, he founded the <b>GSU-DS Organization</b> <a href="https://github.com/GSU-DS-Organization" target="_blank" rel="noopener" title="GSU-DS GitHub">GitHub page</a> to centralize and archive capstone projects for the department. This organization was handed off to Dr. Kuzmin upon graduation, to ensure that future students have a blueprint for projects and somewhere to showcase their capstones.
-                                    In late 2025, he was a participant in the <b>Syracuse University O2O Cohort</b> and a <b>Technical Mentor for <a href="https://www.codepath.org/" target="_blank" rel="noopener" title="CodePath">CodePath</a></b>, assisting students in mastering data structures.
+                                    During his senior year, he founded the GSU-DS Organization <a href="https://github.com/GSU-DS-Organization" target="_blank" rel="noopener" title="GSU-DS GitHub">GitHub page</a> to centralize and archive capstone projects for the department. This organization was handed off to Dr. Kuzmin upon graduation, to ensure that future students have a blueprint for projects and somewhere to showcase their capstones.
+                                    In late 2025, he was a participant in the <a href="https://onlineprograms.syracuse.edu/" target="_blank" rel="noopener" title="Syracuse University O2O">Syracuse University O2O Cohort</a> and a Technical Mentor for <a href="https://www.codepath.org/" target="_blank" rel="noopener" title="CodePath">CodePath</a>, assisting students in mastering data structures.
                                 </p>
 
-                                <!-- ======================== PROJECTS ======================== -->
                                 <div class="mw-heading mw-heading2">
                                     <h2 id="Projects">Projects</h2>
                                 </div>
@@ -431,64 +499,123 @@
                                     The system utilizes <a href="https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration" target="_blank" rel="noopener" title="SharePoint">SharePoint</a> to capture <a href="https://www.goto.com/webinar" target="_blank" rel="noopener" title="GoToWebinar">GoToWebinar</a> and <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener" title="Microsoft Teams">Microsoft Teams</a> attendee reports, two completely different data sources with incompatible formats, which are then standardized and cleaned using <a href="https://www.python.org/" target="_blank" rel="noopener" title="Python">Python</a>.
                                     The solution involves extensive terminal output with detailed logging and error handling through the <a href="https://rich.readthedocs.io/" target="_blank" rel="noopener" title="Rich Python library">Rich</a> library. External CSVs are utilized to fill in missing data to ensure attendee reports, training schedules, and Microsoft polls and forms can be accurately matched.
                                     <br><br>
-                                    Through this system, a true relational database was created to analyze the massive amount of data the company was sitting on.
-                                    This end-to-end pipeline facilitates seamless ingestion into <a href="https://supabase.com/" target="_blank" rel="noopener" title="Supabase">Supabase</a>, enabling non-technical stakeholders to perform complex queries directly through the Supabase interface or via <a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener" title="Power BI">PowerBI</a> integration within Microsoft Teams.
+                                    Through this system, a true <a href="https://en.wikipedia.org/wiki/Relational_database" target="_blank" rel="noopener" title="Relational Database">relational database</a> was created to analyze the massive amount of data the company was sitting on.
+                                    This end-to-end pipeline facilitates seamless ingestion into <a href="https://supabase.com/" target="_blank" rel="noopener" title="Supabase">Supabase</a>, enabling non-technical stakeholders to perform complex queries directly through the Supabase interface or via <a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener" title="Power BI">Power BI</a> integration within Microsoft Teams.
                                     The script utilizes the Data Science standard of <a href="https://cookiecutter-data-science.drivendata.org/" target="_blank" rel="noopener" title="Cookiecutter Data Science">Cookiecutter Data Science</a> for data lineage and structure, ensuring that raw data is never directly modified.
                                 </p>
+                                <div class="project-links">
+                                    <span style="color:#555; font-style:italic;">Internal / proprietary — no public demo available</span>
+                                </div>
 
                                 <div class="mw-heading mw-heading3">
                                     <h3 id="Burglary-Risk">Burglary Risk Prediction</h3>
                                 </div>
-                                <p>Leading a four-person team, Piña spearheaded the creation of a spatiotemporal forecasting pipeline for urban burglary risk in Atlanta.
-                                    The study utilized <a href="https://www.fbi.gov/how-we-can-help-you/more-fbi-services-and-information/ucr/nibrs" target="_blank" rel="noopener" title="FBI NIBRS">FBI NIBRS</a> data, the <a href="https://www.atlantapd.org/i-want-to/crime-data-downloads" target="_blank" rel="noopener" title="Atlanta Police Department Open Data Portal">Atlanta Police Department Open Data Portal</a>, Census data, GIS shapefiles, and meteorological records (through <a href="https://open-meteo.com/" target="_blank" rel="noopener" title="Open-Meteo">Open-Meteo</a>) to create 4 unique and multi-faceted data panels to predict risk zones by Neighborhood Planning Unit (NPU).
-                                    The team employed <b><a href="https://cookiecutter-data-science.drivendata.org/" target="_blank" rel="noopener" title="Cookiecutter Data Science">Cookiecutter Data Science</a></b> for structure and reproducibility with <b><a href="https://wandb.ai/" target="_blank" rel="noopener" title="Weights & Biases">Weights &amp; Biases (WandB)</a></b> for robust model lineage, performance tracking, and artifact handling.
-                                    <br><br>
-                                    <a href="https://github.com/gsu-ds/campus-burglary-risk-prediction" target="_blank" rel="noopener" title="burglary-risk-prediction">View the project →</a>
-                                
+                                <p>Leading a four-person team, Piña spearheaded the creation of a <a href="https://en.wikipedia.org/wiki/Spatiotemporal_pattern" target="_blank" rel="noopener" title="Spatiotemporal Forecasting">spatiotemporal</a> forecasting pipeline for urban burglary risk in Atlanta.
+                                    The study utilized <a href="https://www.fbi.gov/how-we-can-help-you/more-fbi-services-and-information/ucr/nibrs" target="_blank" rel="noopener" title="FBI NIBRS">FBI NIBRS</a> data, the <a href="https://www.atlantapd.org/i-want-to/crime-data-downloads" target="_blank" rel="noopener" title="Atlanta Police Department Open Data Portal">Atlanta Police Department Open Data Portal</a>, <a href="https://data.census.gov/" target="_blank" rel="noopener" title="U.S. Census Bureau Data">Census data</a>, <a href="https://en.wikipedia.org/wiki/Shapefile" target="_blank" rel="noopener" title="GIS Shapefiles">GIS shapefiles</a>, and meteorological records (through <a href="https://open-meteo.com/" target="_blank" rel="noopener" title="Open-Meteo">Open-Meteo</a>) to create 4 unique and multi-faceted data panels to predict risk zones by Neighborhood Planning Unit (NPU).
+                                    The team employed <a href="https://cookiecutter-data-science.drivendata.org/" target="_blank" rel="noopener" title="Cookiecutter Data Science">Cookiecutter Data Science</a> for structure and reproducibility with <a href="https://wandb.ai/" target="_blank" rel="noopener" title="Weights & Biases">Weights &amp; Biases (WandB)</a> for robust model lineage, performance tracking, and artifact handling.
                                 </p>
+                                <div class="project-links">
+                                    <a href="https://campus-burglary-risk-prediction.streamlit.app/" target="_blank" rel="noopener" title="Burglary Risk Prediction App">
+                                        <svg width="16" height="16" viewBox="0 0 32 32" fill="#FF4B4B" aria-hidden="true"><path d="M16.003 0L0 9.236v4.18l16.003-9.232L32 13.416V9.236L16.003 0zM0 14.582v4.18l16.003 9.232L32 18.762v-4.18l-16 9.232-15.997-9.232z"/><path d="M0 19.925v4.18l16.003 9.232L32 24.105v-4.18l-16 9.232-16-9.232z"/></svg>
+                                        View App
+                                    </a>
+                                    <a href="https://github.com/gsu-ds/campus-burglary-risk-prediction" target="_blank" rel="noopener" title="Burglary Risk Prediction Repository">
+                                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                        Repository
+                                    </a>
+                                    <a href="https://www.kaggle.com/datasets/joshuapina/core-atlanta-burglary-related-crimes-2021-2025" target="_blank" rel="noopener" title="Atlanta Burglary Dataset on Kaggle">
+                                        <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm4.977 23.016l-4.405-5.063-1.612 1.68v3.383H11.5V9h3.46v7.097l5.594-7.097h4.046l-5.637 6.94 6.037 7.076h-4.023z"/></svg>
+                                        Kaggle Dataset
+                                    </a>
+                                </div>
 
                                 <div class="mw-heading mw-heading3">
                                     <h3 id="The-Living-Library">The Living Library</h3>
                                 </div>
-                                <p>A full-stack study resource database designed for data science students. Built using <b><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener" title="FastAPI">FastAPI</a></b> and <b><a href="https://supabase.com/" target="_blank" rel="noopener" title="Supabase">Supabase</a></b>, the platform features a <a href="https://www.postgresql.org/" target="_blank" rel="noopener" title="PostgreSQL">postgres</a>-backed semantic search engine utilizing <b>vector embeddings</b>.
+                                <p>A full-stack study resource database designed for data science students. Built using <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener" title="FastAPI">FastAPI</a> and <a href="https://supabase.com/" target="_blank" rel="noopener" title="Supabase">Supabase</a>, the platform features a <a href="https://www.postgresql.org/" target="_blank" rel="noopener" title="PostgreSQL">Postgres</a>-backed semantic search engine utilizing <a href="https://en.wikipedia.org/wiki/Word_embedding" target="_blank" rel="noopener" title="Vector Embeddings">vector embeddings</a>.
                                     It provides a centralized and isolated interface for querying a curated collection of technical textbooks and documentation.
-                                    
-                                    <br><br>
-                                    <a href="https://joshuapina.github.io/living_library/" target="_blank" rel="noopener" title="The Living Library">View the project →</a>
                                 </p>
-                               
+                                <div class="project-links">
+                                    <a href="https://joshuapina.github.io/living_library/" target="_blank" rel="noopener" title="The Living Library App">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                        View App
+                                    </a>
+                                    <a href="https://github.com/JoshuaPina/living_library" target="_blank" rel="noopener" title="The Living Library Repository">
+                                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                        Repository
+                                    </a>
+                                </div>
+
                                 <div class="mw-heading mw-heading3">
                                     <h3 id="ML-HNSCC">ML-HNSCC Study</h3>
                                 </div>
-                                <p>This Machine Learning capstone focused on the automated segmentation and classification of <a href="https://en.wikipedia.org/wiki/Head_and_neck_squamous-cell_carcinoma" target="_blank" rel="noopener" title="HNSCC">Head and Neck Squamous Cell Carcinoma (HNSCC)</a> using axial CT scans.
-                                    Due to the large dataset size, typical for image-based medical research, Piña implemented 90%+ data compression and addressed class imbalances using specialized loss functions, optimizing model generalization across diverse patient datasets.
+                                <p>This Machine Learning capstone focused on the automated segmentation and classification of <a href="https://en.wikipedia.org/wiki/Head_and_neck_squamous-cell_carcinoma" target="_blank" rel="noopener" title="HNSCC">Head and Neck Squamous Cell Carcinoma (HNSCC)</a> using <a href="https://en.wikipedia.org/wiki/CT_scan" target="_blank" rel="noopener" title="CT Scan">axial CT scans</a>.
+                                    Due to the large dataset size, typical for image-based medical research, Piña implemented 90%+ data compression and addressed <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis" target="_blank" rel="noopener" title="Class Imbalance">class imbalances</a> using specialized loss functions, optimizing model generalization across diverse patient datasets.
                                 </p>
-                                <p class="hatnote"><i>Repository: <a href="https://github.com/JoshuaPina/ML-HNSCC-Study" target="_blank" rel="noopener">ML-HNSCC-Study</a></i></p>
+                                <div class="project-links">
+                                    <a href="https://joshuapina.github.io/ML-HNSCC-Study/" target="_blank" rel="noopener" title="ML-HNSCC Study Page">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                        View Project Page
+                                    </a>
+                                    <a href="https://github.com/JoshuaPina/ML-HNSCC-Study" target="_blank" rel="noopener" title="ML-HNSCC Repository">
+                                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                        Repository
+                                    </a>
+                                    <a href="https://www.kaggle.com/datasets/joshuapina/hnscc-updated-images-07-19-25" target="_blank" rel="noopener" title="HNSCC Dataset on Kaggle">
+                                        <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm4.977 23.016l-4.405-5.063-1.612 1.68v3.383H11.5V9h3.46v7.097l5.594-7.097h4.046l-5.637 6.94 6.037 7.076h-4.023z"/></svg>
+                                        Kaggle Dataset
+                                    </a>
+                                </div>
 
                                 <div class="mw-heading mw-heading3">
                                     <h3 id="Ticket-Heroes">Ticket-Heroes</h3>
                                 </div>
-                                <p>A price optimization analysis tool developed to predict the optimal time to purchase concert tickets. The project involved web scraping and sourcing historical pricing data to provide data-driven insights into ticket market volatility.
-                                    Because of the scarcity of data available, the project involved a significant amount of data cleaning and feature engineering to create multiple usable datasets for modeling and testing, all hosted on <a href="https://www.kaggle.com/" target="_blank" rel="noopener" title="Kaggle">Kaggle</a> for future Data Scientists.
+                                <p>A <a href="https://en.wikipedia.org/wiki/Price_optimization" target="_blank" rel="noopener" title="Price Optimization">price optimization</a> analysis tool developed to predict the optimal time to purchase concert tickets. The project involved web scraping and sourcing historical pricing data to provide data-driven insights into ticket market volatility.
+                                    Because of the scarcity of data available, the project involved a significant amount of data cleaning and <a href="https://en.wikipedia.org/wiki/Feature_engineering" target="_blank" rel="noopener" title="Feature Engineering">feature engineering</a> to create multiple usable datasets for modeling and testing.
                                 </p>
-                                <p class="hatnote"><i>Repository: <a href="https://github.com/gsu-ds/ticket-heroes" target="_blank" rel="noopener">gsu-ds/ticket-heroes</a></i></p>
+                                <div class="project-links">
+                                    <a href="https://github.com/gsu-ds/ticket-heroes" target="_blank" rel="noopener" title="Ticket Heroes Repository">
+                                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                        Repository
+                                    </a>
+                                </div>
 
-                                <!-- Clear the graduation photo float before Personal Life -->
                                 <div style="clear:both;"></div>
 
-                                <!-- ======================== PERSONAL LIFE ======================== -->
                                 <div class="mw-heading mw-heading2">
                                     <h2 id="Personal_life">Personal Life</h2>
                                 </div>
-                                <p>Joshua Piña currently resides in <b><a href="https://en.wikipedia.org/wiki/Columbus,_Georgia" target="_blank" rel="noopener" title="Columbus, Georgia">Columbus, Georgia</a></b>.
+                                <p>Joshua Piña currently resides in <a href="https://en.wikipedia.org/wiki/Columbus,_Georgia" target="_blank" rel="noopener" title="Columbus, Georgia">Columbus, Georgia</a>.
                                     He is a dedicated family man, citing his roles as a husband and father as the primary drivers of his professional development and work ethic.
                                     He is married to his high school sweetheart, and they maintain a household with one child, two puppies, and a (sporadically) grumpy cat.
                                 </p>
 
+                                <div class="personal-links-bar">
+                                    <a href="https://github.com/JoshuaPina" target="_blank" rel="noopener" title="GitHub Profile">
+                                        <svg height="15" width="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                        GitHub Profile
+                                    </a>
+                                    <span class="sep">|</span>
+                                    <a href="Assets/docs/resume.pdf" target="_blank" rel="noopener" title="Resume PDF">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                        Resume (PDF)
+                                    </a>
+                                    <span class="sep">|</span>
+                                    <a href="https://linkedin.com/in/joshuadpina" target="_blank" rel="noopener" title="LinkedIn Profile">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                        LinkedIn
+                                    </a>
+                                    <span class="sep">|</span>
+                                    <a href="contact.html" title="Contact">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                        Contact
+                                    </a>
+                                </div>
+
                                 <div class="mw-heading mw-heading3">
                                     <h3 id="Hobbies">Hobbies</h3>
                                 </div>
-                                <p>Piña is an active member of the tech mentorship community, frequently contributing to <b><a href="https://www.colorstack.org/" target="_blank" rel="noopener" title="ColorStack">ColorStack</a></b> and <b><a href="https://www.codepath.org/" target="_blank" rel="noopener" title="CodePath">CodePath</a></b>.
+                                <p>Piña is an active member of the tech mentorship community, frequently contributing to <a href="https://www.colorstack.org/" target="_blank" rel="noopener" title="ColorStack">ColorStack</a> and <a href="https://www.codepath.org/" target="_blank" rel="noopener" title="CodePath">CodePath</a>.
                                     He is an advocate for data ethics and explores the intersection of artificial intelligence and healthcare advancements. Piña is an avid runner and enjoys weightlifting to recenter, refocus, and decompress.
                                     He is a 1x winner of his Fantasy Football League (2017) and a 2x runner-up (2022, 2025).
                                 </p>
@@ -499,93 +626,135 @@
                                 <p>Piña's personal documentation emphasizes his commitment to his wife and children, maintaining a balance between his technical pursuits and family life in Florida and Georgia.
                                 </p>
 
-                                <!-- ======================== CERTIFICATIONS ======================== -->
                                 <div class="mw-heading mw-heading2">
                                     <h2 id="Certifications">Professional Certifications</h2>
                                 </div>
                                 <p>As of February 2026, Piña is a member of <a href="https://www.codepath.org/" target="_blank" rel="noopener" title="CodePath">CodePath</a>'s inaugural AI110 (Foundations of AI Engineering) course.
                                     <br><br>
-                                    On February 23, 2026, Piña earned the new <b><a href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/google-ai-professional-certificate/" target="_blank" rel="noopener" title="Google AI Professional Certificate">Google AI Professional</a></b> certification.<sup><a href="#cite_note-google-ai-4">[4]</a></sup>
-                                         He also holds a certification from <a href="https://www.codepath.org/" target="_blank" rel="noopener" title="CodePath">CodePath</a>'s Advanced TIP (Technical Interview Prep) course<sup><a href="#cite_note-codepath-3">[3]</a></sup> and the <a href="https://www.ibm.com/training/badge/data-analyst-professional-certificate" target="_blank" rel="noopener" title="IBM Data Analyst Professional Certificate">IBM Data Analyst Professional Certificate</a>.
-                                    Piña is an alumnus of the <b><a href="https://fourblock.org/" target="_blank" rel="noopener" title="FourBlock">FourBlock</a> Veteran Development Cohort</b><sup><a href="#cite_note-fourblock-2">[2]</a></sup>, and holds a certificate for the Fall 2025 Atlanta Cohort.
+                                    On February 23, 2026, Piña earned the <a href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/google-ai-professional-certificate/" target="_blank" rel="noopener" title="Google AI Professional Certificate">Google AI Professional</a> certification.<sup><a href="#cite_note-google-ai-4">[4]</a></sup>
+                                    He also holds a certification from <a href="https://www.codepath.org/" target="_blank" rel="noopener" title="CodePath">CodePath</a>'s Advanced TIP (Technical Interview Prep) course<sup><a href="#cite_note-codepath-3">[3]</a></sup> and the <a href="https://www.ibm.com/training/badge/data-analyst-professional-certificate" target="_blank" rel="noopener" title="IBM Data Analyst Professional Certificate">IBM Data Analyst Professional Certificate</a>.
+                                    Piña is an alumnus of the <a href="https://fourblock.org/" target="_blank" rel="noopener" title="FourBlock">FourBlock</a> Veteran Development Cohort<sup><a href="#cite_note-fourblock-2">[2]</a></sup>, and holds a certificate for the Fall 2025 Atlanta Cohort.
                                 </p>
 
-                                <!-- ======================== NOTES ======================== -->
+                                <div class="mw-heading mw-heading2">
+                                    <h2 id="Further_reading">Further Reading and Resources</h2>
+                                </div>
+                                <ul>
+                                    <li><a rel="nofollow" class="external text" href="https://www.kdnuggets.com/" target="_blank">KDnuggets</a> — Data Science, Machine Learning, and AI Research</li>
+                                    <li><a rel="nofollow" class="external text" href="https://towardsdatascience.com/" target="_blank">Towards Data Science</a> — Technical Data Science Implementations</li>
+                                    <li><a rel="nofollow" class="external text" href="https://realpython.com/" target="_blank">RealPython</a> — Python Development and Documentation</li>
+                                    <li><a rel="nofollow" class="external text" href="https://www.3blue1brown.com/" target="_blank">3Blue1Brown</a> — Mathematical Visualizations and Intuition</li>
+                                </ul>
+
+                                <div class="mw-heading mw-heading2">
+                                    <h2 id="External_links">External Links</h2>
+                                </div>
+
+                                <table class="navbox">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="navbox-title">Joshua D. Piña — External Links</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="navbox-group">Portfolio</th>
+                                            <td class="navbox-list">
+                                                <a href="https://joshuapina.github.io/" target="_blank" rel="noopener">Official Portfolio</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="Assets/docs/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="Assets/docs/HOW.md" target="_blank" rel="noopener">How This Was Built</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="navbox-group">Professional</th>
+                                            <td class="navbox-list">
+                                                <a href="https://linkedin.com/in/joshuadpina" target="_blank" rel="noopener">LinkedIn</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://meritpages.com/JoshuaPina" target="_blank" rel="noopener">GSU Merit Page</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/joshuapina" target="_blank" rel="noopener">GitHub Profile</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/gsu-ds" target="_blank" rel="noopener">GSU-DS Organization</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="navbox-group">Projects</th>
+                                            <td class="navbox-list">
+                                                <a href="https://joshuapina.github.io/living_library/" target="_blank" rel="noopener">The Living Library</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/JoshuaPina/living_library" target="_blank" rel="noopener">Living Library (Repo)</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://campus-burglary-risk-prediction.streamlit.app/" target="_blank" rel="noopener">Burglary Risk App</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/gsu-ds/campus-burglary-risk-prediction" target="_blank" rel="noopener">Burglary Risk (Repo)</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://joshuapina.github.io/ML-HNSCC-Study/" target="_blank" rel="noopener">ML-HNSCC Study</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/JoshuaPina/ML-HNSCC-Study" target="_blank" rel="noopener">ML-HNSCC (Repo)</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/gsu-ds/ticket-heroes" target="_blank" rel="noopener">Ticket Heroes (Repo)</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/JoshuaPina/graph-cut-imaging" target="_blank" rel="noopener">Graph-Cut Imaging (Repo)</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://github.com/gsu-ds/fly-like-a-bird" target="_blank" rel="noopener">Fly Like a Bird (Repo)</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://gist.github.com/JoshuaPina/a2824c22ba8c3895fa3872c65e735dab" target="_blank" rel="noopener">Multi-Purpose Conversion Tool</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="navbox-group">Datasets</th>
+                                            <td class="navbox-list">
+                                                <a href="https://www.kaggle.com/datasets/joshuapina/core-atlanta-burglary-related-crimes-2021-2025" target="_blank" rel="noopener">Atlanta Burglary Dataset</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://www.kaggle.com/datasets/joshuapina/hnscc-updated-images-07-19-25" target="_blank" rel="noopener">HNSCC CT Scan Dataset</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="navbox-group">Community</th>
+                                            <td class="navbox-list">
+                                                <a href="https://www.colorstack.org/" target="_blank" rel="noopener">ColorStack</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://www.codepath.org/" target="_blank" rel="noopener">CodePath</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://fourblock.org/" target="_blank" rel="noopener">FourBlock</a>
+                                                <span class="navbox-sep">·</span>
+                                                <a href="https://www.nsdc.uta.edu/" target="_blank" rel="noopener">National Student Data Corps</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
                                 <div class="mw-heading mw-heading2">
                                     <h2 id="Notes">Notes</h2>
                                 </div>
-                                <div>
-                                    <div class="mw-references-wrap">
-                                        <ol class="references">
-                                            <li id="cite_note-merit-1">
-                                                <span class="mw-cite-backlink"><b><a href="#cite_ref-merit-1">^</a></b></span>
-                                                <span class="reference-text">Georgia State University. <a rel="nofollow" class="external text" href="https://meritpages.com/JoshuaPina" target="_blank">"Joshua Piña: Dean's List (2024–2025)"</a>. <i>GSU Merit</i>.</span>
-                                            </li>
-                                            <li id="cite_note-fourblock-2">
-                                                <span class="mw-cite-backlink"><b><a href="#cite_ref-fourblock-2">^</a></b></span>
-                                                <span class="reference-text">FourBlock. (2025). <a rel="nofollow" class="external text" href="https://fourblock.org/" target="_blank">"Professional Development Career Readiness Completion"</a>.</span>
-                                            </li>
-                                            <li id="cite_note-codepath-3">
-                                                <span class="mw-cite-backlink"><b><a href="#cite_ref-codepath-3">^</a></b></span>
-                                                <span class="reference-text">CodePath. (2025). <a rel="nofollow" class="external text" href="https://www.codepath.org/" target="_blank">"Technical Mentorship and Interview Prep Certification"</a>.</span>
-                                            </li>
-                                            <li id="cite_note-google-ai-4">
-                                                <span class="mw-cite-backlink"><b><a href="#cite_ref-google-ai-4">^</a></b></span>
-                                                <span class="reference-text">Google. (2026). <a rel="nofollow" class="external text" href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/google-ai-professional-certificate/" target="_blank">"Google AI Professional Certificate"</a>. Completion Date: February 23, 2026.</span>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                <div class="mw-references-wrap">
+                                    <ol class="references">
+                                        <li id="cite_note-merit-1">
+                                            <span class="mw-cite-backlink"><b><a href="#cite_ref-merit-1">^</a></b></span>
+                                            <span class="reference-text">Georgia State University. <a rel="nofollow" class="external text" href="https://meritpages.com/JoshuaPina" target="_blank">"Joshua Piña: Dean's List (2024–2025)"</a>. <i>GSU Merit</i>.</span>
+                                        </li>
+                                        <li id="cite_note-fourblock-2">
+                                            <span class="mw-cite-backlink"><b><a href="#cite_ref-fourblock-2">^</a></b></span>
+                                            <span class="reference-text">FourBlock. (2025). <a rel="nofollow" class="external text" href="https://fourblock.org/" target="_blank">"Professional Development Career Readiness Completion"</a>.</span>
+                                        </li>
+                                        <li id="cite_note-codepath-3">
+                                            <span class="mw-cite-backlink"><b><a href="#cite_ref-codepath-3">^</a></b></span>
+                                            <span class="reference-text">CodePath. (2025). <a rel="nofollow" class="external text" href="https://www.codepath.org/" target="_blank">"Technical Mentorship and Interview Prep Certification"</a>.</span>
+                                        </li>
+                                        <li id="cite_note-google-ai-4">
+                                            <span class="mw-cite-backlink"><b><a href="#cite_ref-google-ai-4">^</a></b></span>
+                                            <span class="reference-text">Google. (2026). <a rel="nofollow" class="external text" href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/google-ai-professional-certificate/" target="_blank">"Google AI Professional Certificate"</a>. Completion Date: February 23, 2026.</span>
+                                        </li>
+                                    </ol>
                                 </div>
 
-                                <!-- ======================== FURTHER REPOSITORIES ======================== -->
                                 <div class="mw-heading mw-heading2">
-                                    <h2 id="Further_repositories">Further repositories</h2>
-                                </div>
-                                <ul>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/JoshuaPina/living_library" target="_blank" rel="noopener">The Living Library</a>: Semantic search database for data science resources (FastAPI, Supabase)</li>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/JoshuaPina/ML-HNSCC-Study" target="_blank" rel="noopener">ML-HNSCC Study</a>: ML segmentation and classification of head and neck carcinoma from CT scans</li>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/JoshuaPina/graph-cut-imaging" target="_blank" rel="noopener">Graph-Cut Imaging</a>: Graph-cut algorithms for image segmentation</li>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/JoshuaPina/DIP_Project2" target="_blank" rel="noopener">Digital Image Processing Project</a>: Coursework covering filtering, transforms, and segmentation</li>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/gsu-ds/campus-burglary-risk-prediction" target="_blank" rel="noopener">Campus Burglary Risk Prediction</a>: Spatiotemporal burglary risk forecasting by NPU across Atlanta</li>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/gsu-ds/ticket-heroes" target="_blank" rel="noopener">Ticket Heroes</a>: Optimal concert ticket purchase timing using historical price data</li>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/gsu-ds/fly-like-a-bird" target="_blank" rel="noopener">Fly Like a Bird</a>: GSU Data Science capstone project</li>
-                                    <li><a rel="nofollow" class="external text" href="https://github.com/gsu-ds" target="_blank" rel="noopener">GSU-DS Organization</a>: Archive of GSU Data Science capstone projects</li>
-                                    <li><a rel="nofollow" class="external text" href="https://gist.github.com/JoshuaPina/a2824c22ba8c3895fa3872c65e735dab" target="_blank" rel="noopener">Multi-Purpose Conversion Tool</a>: Utility gist for common data type conversions</li>
-                                </ul>
-
-                                <!-- ======================== FURTHER READING ======================== -->
-                                <div class="mw-heading mw-heading2">
-                                    <h2 id="Further_reading">Further reading and resources</h2>
-                                </div>
-                                <ul>
-                                    <li><cite class="citation book cs1">KDnuggets. <a rel="nofollow" class="external text" href="https://www.kdnuggets.com/" target="_blank">"Data Science, Machine Learning, and AI Research"</a>.</cite></li>
-                                    <li><cite class="citation book cs1">Towards Data Science. <a rel="nofollow" class="external text" href="https://towardsdatascience.com/" target="_blank">"Technical Data Science Implementations"</a>.</cite></li>
-                                    <li><cite class="citation book cs1">RealPython. <a rel="nofollow" class="external text" href="https://realpython.com/" target="_blank">"Python Development and Documentation"</a>.</cite></li>
-                                    <li><cite class="citation book cs1">3Blue1Brown. <a rel="nofollow" class="external text" href="https://www.3blue1brown.com/" target="_blank">"Mathematical Visualizations and Intuition"</a>.</cite></li>
-                                </ul>
-
-                                <!-- ======================== EXTERNAL LINKS ======================== -->
-                                <div class="mw-heading mw-heading2">
-                                    <h2 id="External_links">External links</h2>
-                                </div>
-
-                                <ul>
-                                    <li><span class="official-website"><span class="url"><a class="external text" href="https://joshuapina.github.io/" target="_blank" rel="noopener">Official portfolio</a></span></span></li>
-                                    <li><a class="external text" href="https://github.com/joshuapina" target="_blank" rel="noopener">GitHub Profile</a></li>
-                                    <li><a class="external text" href="https://linkedin.com/in/joshuadpina" target="_blank" rel="noopener">LinkedIn Profile</a></li>
-                                    <li><a class="external text" href="https://meritpages.com/JoshuaPina" target="_blank" rel="noopener">GSU Merit Page</a></li>
-                                    <li><a class="external text" href="https://joshuapina.github.io/living_library/" target="_blank" rel="noopener">The Living Library</a></li>
-                                </ul>
-
-                            <div class="mw-heading mw-heading2">
-                                <h2 id="Legal_Disclaimer">Legal disclaimer</h2>
+                                    <h2 id="Legal_Disclaimer">Legal disclaimer</h2>
                                 </div>
                                 <div class="side-box plainlinks sistersitebox" style="margin-top:0.8em;">
                                     <div class="side-box-flex">
                                         <div class="side-box-image">
-                                            <img alt="Joshua Piña" src="Assets/images/Pina-Suit-Profile-Pic.jpg"
-                                                decoding="async" width="35" height="35" class="mw-file-element"
-                                                style="border-radius:50%; object-fit:cover; object-position:center top;" />
+                                            <img alt="Joshua Piña" src="Assets/images/Pina-Suit-Profile-Pic.jpg" decoding="async" width="35" height="35" class="mw-file-element" style="border-radius:50%; object-fit:cover; object-position:center top;" />
                                         </div>
                                         <div class="side-box-text plainlist">
                                             No affiliation with wikipedia.org or the Wikimedia Foundation.
@@ -596,6 +765,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -605,7 +775,7 @@
             <div class="mw-footer-container">
                 <footer id="footer" class="mw-footer">
                     <ul id="footer-info">
-                        <li id="footer-info-lastmod">This page was last edited on <span id="footer-last-edited">23 February 2026</span>, at 19:02<span class="anonymous-show">&#160;(UTC)</span>.</li>
+                        <li id="footer-info-lastmod">This page was last edited on <span id="footer-last-edited"></span>.</li>
                         <li id="footer-info-copyright">&copy; <span id="footer-year"></span> Joshua Piña. All rights reserved. Built with HTML, CSS &amp; JS. Inspired by Wikipedia.</li>
                     </ul>
                 </footer>
@@ -614,26 +784,27 @@
         </div>
     </div>
 
-    <!-- ======================== DYNAMIC DATES SCRIPT ======================== -->
     <script>
-        // Update copyright year dynamically
         document.getElementById('footer-year').textContent = new Date().getFullYear();
 
-        // Calculate relative time string (e.g. "6 months ago", "2 days ago")
-        function relativeTime(dateStr) {
-            const past = new Date(dateStr);
-            const now = new Date();
-            const diffMs = now - past;
-            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-            const diffMonths = Math.floor(diffDays / 30.44);
-            const diffYears = Math.floor(diffDays / 365.25);
+        document.getElementById('footer-last-edited').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
 
-            if (diffDays === 0) return 'today';
-            if (diffDays === 1) return '1 day ago';
-            if (diffDays < 30) return `${diffDays} days ago`;
+        function relativeTime(dateStr) {
+            const past       = new Date(dateStr);
+            const now        = new Date();
+            const diffMs     = now - past;
+            const diffDays   = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const diffMonths = Math.floor(diffDays / 30.44);
+            const diffYears  = Math.floor(diffDays / 365.25);
+
+            if (diffDays === 0)   return 'today';
+            if (diffDays === 1)   return '1 day ago';
+            if (diffDays < 30)    return `${diffDays} days ago`;
             if (diffMonths === 1) return '1 month ago';
-            if (diffMonths < 12) return `${diffMonths} months ago`;
-            if (diffYears === 1) return '1 year ago';
+            if (diffMonths < 12)  return `${diffMonths} months ago`;
+            if (diffYears === 1)  return '1 year ago';
             return `${diffYears} years ago`;
         }
 

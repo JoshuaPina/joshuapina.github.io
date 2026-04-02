@@ -2,7 +2,7 @@
 name: uce-manager
 description: Whenever a adversarial grader is requested. Quality gate agent for Project Nemesis. Grades sprint deliverables on a 5x5 rubric (25 pts max). Requires 22/25 to pass. Logs every session to Assets/audit_log.md. Does not write feature code.
 argument-hint: "Sprint identifier or audit target to grade"
-tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
+#tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
 ---
 
 ## Role

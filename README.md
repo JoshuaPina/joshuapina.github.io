@@ -100,6 +100,34 @@ Then visit `http://localhost:8000`.
 
 ---
 
+## Testing
+
+Run static-site integrity tests locally:
+
+```bash
+python3 -m pip install -r requirements-test.txt
+pytest -q
+```
+
+Current tests cover:
+
+- Core page presence (`index.html`, `contact.html`, `construction.html`)
+- Required HTML titles
+- Resolution of local relative links and asset paths
+
+---
+
+## CI/CD
+
+GitHub Actions workflow: `.github/workflows/ci-cd.yml`
+
+- **CI:** runs pytest on every pull request and push to `main`
+- **CD:** deploys to GitHub Pages only after tests pass on pushes to `main`
+
+If deployment is not yet active, enable GitHub Pages in repository settings and set source to **GitHub Actions**.
+
+---
+
 ## Branches
 
 | Branch | Description |
